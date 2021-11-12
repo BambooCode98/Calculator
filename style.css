@@ -1,0 +1,47 @@
+.calcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#display {
+    border: 1px rgb(48, 44, 44) solid;
+    width: 250px;
+    height: 45px;
+}
+
+#calculator {
+    border:1px red solid;
+    display: grid;
+    height: 300px;
+    width: 250px;
+    grid-template-columns: repeat(4, 4fr);
+    grid-template-rows: repeat(5, 4fr);
+}
+
+
+
+button {
+    border: 1px red solid;
+    height: 100%;
+    width: 100%;
+    
+}
+    button:hover {
+        background-color: rgb(167, 155, 54);
+    }    
+
+    #clear:hover {
+        background-color: rgb(114, 214, 209);
+    }
+
+
+    .operator {
+        background-color: hsla(47, 74%, 82%);
+    }
+        .operator:hover {
+            background-color: lightgreen;
+        }

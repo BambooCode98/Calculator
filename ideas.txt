@@ -1,0 +1,189 @@
+let one = document.getElementById("number1").innerText;
+let two = document.getElementById("number2").innerText;
+let three = document.getElementById("number3").innerText;
+let four = document.getElementById("number4").innerText;
+let five = document.getElementById("number5").innerText;
+let six = document.getElementById("number6").innerText;
+let seven = document.getElementById("number7").innerText;
+let eight = document.getElementById("number8").innerText;
+let nine = document.getElementById("number9").innerText;
+let zero = document.getElementById("number0").innerText;
+//string to number convserions
+const numberArray = [zero, one, two, three, four, five, six, seven, eight, nine];
+let trueNumberArray = numberArray.map(elem=> parseInt(elem, 10));
+console.table(trueNumberArray);
+
+/*
+number1.addEventListener("click", display1);
+number2.addEventListener("click", display2);
+number3.addEventListener("click", display3);
+number4.addEventListener("click", display4);
+number5.addEventListener("click", display5);
+number6.addEventListener("click", display6);
+number7.addEventListener("click", display7);
+number8.addEventListener("click", display8);
+number9.addEventListener("click", display9);
+number0.addEventListener("click", display0);
+operatorMultiply.addEventListener("click", displayMultiply);
+operatorDivide.addEventListener("click", displayDivide);
+operatorSubtract.addEventListener("click", displaySubtract);
+operatorAdd.addEventListener("click", displayAdd); */
+
+number1.addEventListener("click", one);
+number2.addEventListener("click", two);
+number3.addEventListener("click", three);
+number4.addEventListener("click", four);
+number5.addEventListener("click", five);
+number6.addEventListener("click", six);
+number7.addEventListener("click", seven);
+number8.addEventListener("click", eight);
+number9.addEventListener("click", nine);
+number0.addEventListener("click", zero);
+operatorMultiply.addEventListener("click", multiply);
+operatorDivide.addEventListener("click", divide);
+operatorSubtract.addEventListener("click", subtract);
+operatorAdd.addEventListener("click", add);
+
+
+
+
+function display1() {
+    display.textContent = 1;
+}
+function display2() {
+    display.textContent = 2;
+}
+function display3() {
+    display.textContent = 3;
+}
+function display4() {
+    display.textContent = 4;
+}
+function display5() {
+    display.textContent = 5;
+}
+function display6() {
+    display.textContent = 6;
+}
+function display7() {
+    display.textContent = 7;
+}
+function display8() {
+    display.textContent = 8;
+}
+function display9() {
+    display.textContent = 9;
+}
+function display0() {
+    display.textContent = 0;
+}
+function displayMultiply() {
+    display.textContent = `*`;
+}
+function displayDivide() {
+    display.textContent = `/`;
+}
+function displaySubtract() {
+    display.textContent = `-`;
+}
+function displayAdd() {
+    display.textContent = `+`;
+}
+function one() {
+    return 1;
+}
+function two() {
+    return 2;
+}
+function three() {
+    return 3;
+}
+function four() {
+    return 4;
+}
+function five() {
+    return 5;
+}
+function six() {
+    return 6;
+}
+function seven() {
+    return 7;
+}
+function eight() {
+    return 8;
+}
+function nine() {
+    return 9;
+}
+function zero() {
+    return 0;
+}
+
+
+
+
+
+
+//choice selection function
+
+buttonChoice.forEach(choice => choice.addEventListener("click", (e) => {
+    userInput = e.target.innertext;
+    display.innerText = userInput;
+    user = parseFloat(userInput);
+    console.log(user);
+    
+    
+}));
+
+buttonChoice1.forEach(choice => choice.addEventListener("click", e => {
+    buttonChoice1 = e.target.id;
+    if (buttonChoice1 === "1") {
+        a = parseInt(buttonChoice1);
+    } else if (buttonChoice1 === "2") {
+        a = parseInt(buttonChoice1);
+    } else if (buttonChoice1 === "3" || buttonChoice1 === "4" || buttonChoice1 === "5") {
+        a = parseInt(buttonChoice1);
+    } else if (buttonChoice1 === "6" || buttonChoice1 === "7" || buttonChoice1 === "8") {
+        a = parseInt(buttonChoice1);
+    }  else if (buttonChoice1 === "9" || buttonChoice1 === "0") {
+        a = parseInt(buttonChoice1);
+    } else if (buttonChoice1 === "-") {
+        subtract(a);
+    }
+    console.log(subtract(a));
+    
+}));
+
+
+
+
+const number1 = document.getElementById("1");
+const number2 = document.getElementById("2");
+const number3 = document.getElementById("3");
+const number4 = document.getElementById("4");
+const number5 = document.getElementById("5");
+const number6 = document.getElementById("6");
+const number7 = document.getElementById("7");
+const number8 = document.getElementById("8");
+const number9 = document.getElementById("9");
+const number0 = document.getElementById("0");
+const display = document.getElementById("display");
+const multiply = document.getElementById("multiply");
+const divide = document.getElementById("divide");
+const subtract = document.getElementById("subtract");
+const add = document.getElementById("add");
+const total = document.getElementById("equal");
+let userInput;
+let user;
+let buttonChoice1 = document.querySelectorAll("button");
+let buttonChoice2 = document.querySelectorAll("id");
+let buttonChoice3 = document.querySelectorAll("button");
+
+
+
+document.getElementById("calculator").addEventListener("click", function(event) {
+    if (event.target.nodeName = "button") {
+        console.log(event.target.textContent);
+    }
+});
