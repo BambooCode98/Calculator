@@ -187,3 +187,104 @@ document.getElementById("calculator").addEventListener("click", function(event) 
         console.log(event.target.textContent);
     }
 });
+
+
+
+
+
+
+let a;
+let b;
+
+
+function getNumber() {
+    for(let i = 0; i < number.length; i++) {
+    number[i].addEventListener("click", numClick);
+    //console.log(number);
+    return number;
+    }
+}
+
+
+
+for(let i = 0; i < operator.length; i++) {
+    operator[i].addEventListener("click", calculate);
+    
+}
+
+
+
+
+
+function numClick() {
+    if (a === "") {}
+}
+
+
+
+function calculate() {
+    if (operator === "add") {
+        a + b;
+    } else if (operator === "subtract") {
+        a - b;
+    } else if (operator === "multiply") {
+        a * b;
+    } else if (operator === "divide") {
+        a / b;
+    }
+}
+
+
+
+
+
+
+
+
+
+clearButton.addEventListener("click", clearCalculator);
+function clearCalculator() {
+    window.location.reload();
+}
+
+
+
+
+
+console.log(getNumber());
+console.log(stringToNum());
+
+
+
+
+
+let one = document.getElementById('1');
+let two = document.getElementById('2');
+let three = document.getElementById('3');
+let four = document.getElementById('4');
+let five = document.getElementById('5');
+let six = document.getElementById('6');
+let seven = document.getElementById('7');
+let eight = document.getElementById('8');
+let nine = document.getElementById('9');
+let zero = document.getElementById('0');
+const add = document.getElementById("add");
+const subtract = document.getElementById("subtract");
+const multiply = document.getElementById("multiply");
+const divide = document.getElementById("divide");
+const clearButton = document.getElementById("clear");
+
+one.addEventListener("click", display1);
+two.addEventListener("click", display2);
+three.addEventListener("click", display3);
+four.addEventListener("click", display4);
+five.addEventListener("click", display5);
+six.addEventListener("click", display6);
+seven.addEventListener("click", display7);
+eight.addEventListener("click", display8);
+nine.addEventListener("click", display9);
+zero.addEventListener("click", display0);
+multiply.addEventListener("click", displayMultiply);
+divide.addEventListener("click", displayDivide);
+subtract.addEventListener("click", displaySubtract);
+add.addEventListener("click", displayAdd); 

@@ -1,30 +1,16 @@
-const number = document.querySelectorAll('[data-number]');
-const clearButton = document.getElementById("clear");
+const numberArray = document.querySelectorAll('button');
+const operatorArray = document.querySelectorAll('operator');
+const equalButton = document.querySelector('equal');
+let display = document.getElementById("display");
+const calculator = {
+    displayNum: "0",
+    value1: 0,
+    operation: null,
+    value2: 0,
+    total: null,
 
-
-
-
-
-
-number.addEventListener("click", click());
-
-
-function click() {
-    console.log("hi");
 }
 
 
-
-
-
-
-
-
-
-
-
-clearButton.addEventListener("click", clearCalculator);
-function clearCalculator() {
-    window.location.reload();
-}
+calculator.displayNum = display;
 
