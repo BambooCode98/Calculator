@@ -16,7 +16,7 @@ buttons.map(button => {
                 }
                 break;
             case "=":
-                display.textContent = eval(display.textContent);
+                display.textContent = (display.textContent);
                 break;
             default:
                 display.textContent += e.target.textContent;
