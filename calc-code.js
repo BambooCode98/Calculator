@@ -1,16 +1,56 @@
-const numberArray = document.querySelectorAll('button');
-const operatorArray = document.querySelectorAll('operator');
-const equalButton = document.querySelector('equal');
-let display = document.getElementById("display");
-const calculator = {
-    displayNum: "0",
-    value1: 0,
-    operation: null,
-    value2: 0,
-    total: null,
+//calculator variables
+let display = document.getElementById('display');
+let buttons = Array.from(document.getElementsByClassName('button'));
+let number1;
+let number2;
 
+buttons.map(button => {
+    button.addEventListener("click", (e) => {
+        switch (e.target.textContent) {
+            case "AC":
+                display.textContent = " ";
+                break;
+            case "DEL":
+                if (display.textContent) {
+                    display.textContent = display.textContent.slice(0, -1);
+                }
+                break;
+            case "=":
+                display.textContent = eval(display.textContent);
+                break;
+            default:
+                display.textContent += e.target.textContent;
+        }
+    });
+});
+
+
+//user input - operator
+operator = ("enter: +,-,/,*");
+
+
+//user input - numbers
+number1 = parseFloat(("enter a number: "));
+number2 = parseFloat(("enter a number: "));
+
+
+//calculation
+let total;
+
+if (operator === "+") {
+    total = number1 + number2;
+} else if (operator === "-") {
+    total = number1 - number2;
+} else if (operator === "*") {
+    total = number1 * number2;
+} else if (operator === "/") {
+    total = number1 / number2;
 }
 
+display.textContent = total;
 
-calculator.displayNum = display;
+
+
+
+//test
 

@@ -288,3 +288,43 @@ multiply.addEventListener("click", displayMultiply);
 divide.addEventListener("click", displayDivide);
 subtract.addEventListener("click", displaySubtract);
 add.addEventListener("click", displayAdd); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//object calculator
+
+const buttons = document.getElementsByClassName("button");
+let number1;
+let number2;
+
+
+const operatorArray = document.querySelectorAll('operator');
+const equalButton = document.querySelector('equal');
+let display = document.getElementById("display");
+const calculator = {
+    displayNum: "0",
+    value1: 0,
+    operation: null,
+    value2: 0,
+    total: null,
+
+}
+
+calculator.displayNum = display;
+
+//s1-+/*s2 = sT (in object) then when equal is hit give the sT
+
+
+
+console.log(buttons);
+console.log(number2);
